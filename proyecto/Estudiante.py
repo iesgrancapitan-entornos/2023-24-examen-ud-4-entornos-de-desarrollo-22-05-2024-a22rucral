@@ -8,44 +8,23 @@ Extrae una superclase con los campos
 	nif
 """
 
+class Estudiante:
+    nif = "11111111Z";
+    curso = "Primaria";
+    nombre = "Nombre";
+    apellidos = "Apellidos";
 
-class Persona:
-    def __init__(self, nombre, dni, apellidos):
-        """
-        Inicializa un objeto en la clase persona
-        :param nombre:
-        :param dni:
-        :param apellidos:
-        """
-        self.__nif = dni
-        self.__nombre = nombre
-        self.__apellidos = apellidos
+    def __init__(self):
+        pass;
 
-
-class Estudiante(Persona):
-    curso = "Primaria"
-
-    def __init__(self, nif, curso, nombre, apellidos, dni):
-        """
-        Inicializa el objeto en la clase estudiante
-        :param nif:
-        :param curso:
-        :param nombre:
-        :param apellidos:
-        :param dni:
-        """
-        super().__init__(nombre, dni, apellidos)
-        self.nif = nif
-        self.curso = curso
-        self.nombre = nombre
-        self.apellidos = apellidos
+    def __init__(self, nif, curso, nombre, apellidos):
+        self.nif = nif;
+        self.curso = curso;
+        self.nombre = nombre;
+        self.apellidos = apellidos;
 
     @property
     def nif(self):
-        """
-
-        :rtype: object
-        """
         return self.__nif
 
     @nif.setter
@@ -54,10 +33,6 @@ class Estudiante(Persona):
 
     @property
     def curso(self):
-        """
-
-        :return: el curso en el que se encuentra
-        """
         return self.__curso
 
     @curso.setter
@@ -66,10 +41,6 @@ class Estudiante(Persona):
 
     @property
     def nombre(self):
-        """
-
-        :return: el nombre del estudiante
-        """
         return self.__nombre
 
     @nombre.setter
@@ -78,12 +49,9 @@ class Estudiante(Persona):
 
     @property
     def apellidos(self):
-        """
-
-        :return: apellidos del estudiante
-        """
         return self.__apellidos
 
     @apellidos.setter
     def apellidos(self, value):
         self.__apellidos = value
+
